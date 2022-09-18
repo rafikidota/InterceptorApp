@@ -16,16 +16,13 @@ export class UsersService {
 
   getUser() {
     const params = new HttpParams().append('page', '1');
-    
+
     return this.http.get(`${this.base_url}/user`, {
       params,
     }).pipe(
-      map(res =>{
-        console.log(res);
-        return res;
-      }) 
+      map((res: any) => res['data'])
     );
   }
 
-  
+
 }

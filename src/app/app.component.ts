@@ -21,7 +21,7 @@ export class AppComponent {
         console.log(res);
       },
       error: (err) => {
-        console.log(err);
+        console.log('AppComponet Error');
       }
     });
   }
